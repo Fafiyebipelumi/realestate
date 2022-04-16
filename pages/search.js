@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Image from "next/image";
 import { Flex, Box, Text, Icon } from '@chakra-ui/react'
 import { BsFilter } from 'react-icons/bs'
-import SearchFilters from "../components/SearchFilters";
+import SearchFilter from "../components/SearchFilter";
 import Property from '../components/Property';
 import noresult from '../assets/images/noresult.svg'
 import { fetchApi, baseUrl } from "../utils/FetchApi";
@@ -28,7 +28,7 @@ const Search = ({ properties }) => {
                 <Text>Search Property By Filters</Text>
                 <Icon paddingLeft='2' w='7' as={BsFilter} />
             </Flex>
-            {searchFilters && <SearchFilters />}
+            {searchFilters && <SearchFilter />}
             <Text fontSize='2xl' p='4' fontWeight='bold'>
                 Properties {router.query.purpose}
             </Text>
